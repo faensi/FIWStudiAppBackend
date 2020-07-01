@@ -1,0 +1,364 @@
+[CoffeeButton
+  |
+  +State createState()
+]
+
+[<abstract>StatefulWidget]<:-[CoffeeButton]
+
+[_CoffeeButtonState
+  |
+  -_timer: Timer
+  |
+  +Widget build();
+  +void initState();
+  +void dispose();
+  -Future _iniData()
+]
+
+[_CoffeeButtonState]o-[<abstract>Timer]
+[<abstract>State<T>]<:-[_CoffeeButtonState]
+
+[CoffeeCard
+  |
+  +State createState()
+]
+
+[<abstract>StatefulWidget]<:-[CoffeeCard]
+
+[_CoffeeCardState
+  |
+  -_timer: Timer
+  |
+  +Widget build();
+  +void initState();
+  +void dispose();
+  -Future _iniData();
+  -Future _updateCoffeeImage()
+]
+
+[_CoffeeCardState]o-[<abstract>Timer]
+[<abstract>State<T>]<:-[_CoffeeCardState]
+
+[CoffeeHeadline
+  |
+  <static>-_hPad: double
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[CoffeeHeadline]
+
+[CoffeeText
+  |
+  <static>-_hPad: double
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[CoffeeText]
+
+[CoffeeView
+  |
+  +State createState()
+]
+
+[<abstract>StatefulWidget]<:-[CoffeeView]
+
+[_CoffeeViewState
+  |
+  +Widget build();
+  -Widget _loggedInBar()
+]
+
+[<abstract>State<T>]<:-[_CoffeeViewState]
+
+[FSnewsCard
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[FSnewsCard]
+
+[FSnewsCreateView
+  |
+  <static>-_title: TextEditingController;
+  <static>-_text: TextEditingController;
+  +title: String;
+  +text: String
+  |
+  +Widget build()
+]
+
+[FSnewsCreateView]o-[TextEditingController]
+[<abstract>StatelessWidget]<:-[FSnewsCreateView]
+
+[FSnewsView
+  |
+  +State createState()
+]
+
+[<abstract>StatefulWidget]<:-[FSnewsView]
+
+[_FSnewsViewState
+  |
+  -_timer: Timer
+  |
+  +Widget build();
+  -Widget _buildButtonIfLoggedIn();
+  +void initState();
+  +void dispose();
+  -Future _iniData()
+]
+
+[_FSnewsViewState]o-[<abstract>Timer]
+[<abstract>State<T>]<:-[_FSnewsViewState]
+
+[HelperFunctions
+  |
+  <static>+MaterialColor createMaterialColor();
+  <static>+String displayTime();
+  <static>+String getIso8601Time();
+  <static>+void setCoffeeImageByState();
+  <static>+Future loadLoginFromSharedPref();
+  <static>+Future storeLoginInSharedPref()
+]
+
+[KaimWVCard
+  |
+  +State createState()
+]
+
+[<abstract>StatefulWidget]<:-[KaimWVCard]
+
+[_KaimWVState
+  |
+  +Widget build()
+]
+
+[<abstract>State<T>]<:-[_KaimWVState]
+
+[RadioWidgetDemo
+  |
+  +title: String
+  |
+  +RadioWidgetDemoState createState()
+]
+
+[<abstract>StatefulWidget]<:-[RadioWidgetDemo]
+
+[RadioWidgetDemoState
+  |
+  +selectedRadioTile: int
+  |
+  +void initState();
+  +dynamic setSelectedRadioTile();
+  +Widget build()
+]
+
+[<abstract>State<T>]<:-[RadioWidgetDemoState]
+
+[FreeRooms
+  |
+  +FreeRoomsState createState()
+]
+
+[<abstract>StatefulWidget]<:-[FreeRooms]
+
+[FreeRoomsState
+  |
+  +data: List;
+  +url: String;
+  +free: bool
+  |
+  -Future _getData();
+  -String _checkTime();
+  -Color _getColor();
+  +Widget build();
+  +void initState()
+]
+
+[<abstract>State<T>]<:-[FreeRoomsState]
+
+[Booking
+  |
+  +description: String;
+  +endTime: String;
+  +externalCalendarUid: String;
+  +externalCalenderName: String;
+  +id: String;
+  +roomName: String;
+  +self: String;
+  +href: String;
+  +rel: String;
+  +type: String;
+  +startTime: String
+]
+
+[Room
+  |
+  +bookingUrl: String;
+  +cns: String;
+  +id: String;
+  +personUrl: String;
+  +href: String;
+  +rel: String;
+  +type: String;
+  +roomName: String;
+  +roomStatus: String;
+  +roomStatusColor: String;
+  +roomStatusDisplay: String;
+  +self: String;
+  +list: List<Booking>
+]
+
+[Rooms1Card
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[Rooms1Card]
+
+[Rooms2Card
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[Rooms2Card]
+
+[Rooms
+  |
+  +_RoomsState createState()
+]
+
+[<abstract>StatefulWidget]<:-[Rooms]
+
+[_RoomsState
+  |
+  +roomDetails: List<Room>;
+  +bookingDetails: List<Booking>
+  |
+  +Material MyItems();
+  +Widget build();
+  +Future getRoomData();
+  +Future getBookingData();
+  -Color _getColorFromHex();
+  +String checkTime()
+]
+
+[<abstract>State<T>]<:-[_RoomsState]
+
+[Rooms
+  |
+  +_RoomsState createState()
+]
+
+[<abstract>StatefulWidget]<:-[Rooms]
+
+[_RoomsState
+  |
+  +Material MyItems();
+  +Widget build()
+]
+
+[<abstract>State<T>]<:-[_RoomsState]
+
+[Note
+  |
+  +sem: int;
+  +degreeProgram: String;
+  +offset: int;
+  +insertSize: int;
+  +q: String
+  |
+  +Future getCourseList();
+  <static>-List _convertToListWithLectures();
+  <static>+String getNextUrl()
+]
+
+[Course
+  |
+  +title: String;
+  +lecturers: String
+]
+
+[ScheduleCard
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[ScheduleCard]
+
+[ScheduleDetail
+  |
+  +State createState()
+]
+
+[<abstract>StatefulWidget]<:-[ScheduleDetail]
+
+[_ScheduleDetailState
+  |
+  -_courseList: List<Course>
+  |
+  +Widget build();
+  -Widget _buildCourseList();
+  +void initState();
+  -Future _initData()
+]
+
+[<abstract>State<T>]<:-[_ScheduleDetailState]
+
+[ScheduleSemester
+  |
+  +semesterList: List<int>
+  |
+  +Widget build();
+  -Widget _buildSemesterListView()
+]
+
+[<abstract>StatelessWidget]<:-[ScheduleSemester]
+
+[ScheduleView
+  |
+  +courseOfStudies: List<String>
+  |
+  +Widget build();
+  -Widget _buildSemesterListView()
+]
+
+[<abstract>StatelessWidget]<:-[ScheduleView]
+
+[StartView
+  |
+  +_StartViewState createState()
+]
+
+[<abstract>StatefulWidget]<:-[StartView]
+
+[_StartViewState
+  |
+  +Widget build();
+  +void initState();
+  -Future _loadLogin()
+]
+
+[<abstract>State<T>]<:-[_StartViewState]
+
+[LoginForm
+  |
+  <static>-_user: TextEditingController;
+  <static>-_pass: TextEditingController;
+  +username: String;
+  +password: String
+  |
+  +Widget build()
+]
+
+[LoginForm]o-[TextEditingController]
+[<abstract>StatelessWidget]<:-[LoginForm]
+
+[NavDrawer
+  |
+  +Widget build()
+]
+
+[<abstract>StatelessWidget]<:-[NavDrawer]

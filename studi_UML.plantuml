@@ -1,0 +1,317 @@
+@startuml
+set namespaceSeparator ::
+
+class "FIW_Studi_App::Coffee::coffee_button.dart::CoffeeButton" {
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Coffee::coffee_button.dart::CoffeeButton"
+
+class "FIW_Studi_App::Coffee::coffee_button.dart::_CoffeeButtonState" {
+  -Timer _timer
+  +Widget build()
+  +void initState()
+  +void dispose()
+  -Future _iniData()
+}
+
+"FIW_Studi_App::Coffee::coffee_button.dart::_CoffeeButtonState" o-- "dart::async::Timer"
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Coffee::coffee_button.dart::_CoffeeButtonState"
+
+class "FIW_Studi_App::Coffee::coffee_card.dart::CoffeeCard" {
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Coffee::coffee_card.dart::CoffeeCard"
+
+class "FIW_Studi_App::Coffee::coffee_card.dart::_CoffeeCardState" {
+  -Timer _timer
+  +Widget build()
+  +void initState()
+  +void dispose()
+  -Future _iniData()
+  -Future _updateCoffeeImage()
+}
+
+"FIW_Studi_App::Coffee::coffee_card.dart::_CoffeeCardState" o-- "dart::async::Timer"
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Coffee::coffee_card.dart::_CoffeeCardState"
+
+class "FIW_Studi_App::Coffee::coffee_headline.dart::CoffeeHeadline" {
+  {static} -double _hPad
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Coffee::coffee_headline.dart::CoffeeHeadline"
+
+class "FIW_Studi_App::Coffee::coffee_text.dart::CoffeeText" {
+  {static} -double _hPad
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Coffee::coffee_text.dart::CoffeeText"
+
+class "FIW_Studi_App::Coffee::coffee_view.dart::CoffeeView" {
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Coffee::coffee_view.dart::CoffeeView"
+
+class "FIW_Studi_App::Coffee::coffee_view.dart::_CoffeeViewState" {
+  +Widget build()
+  -Widget _loggedInBar()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Coffee::coffee_view.dart::_CoffeeViewState"
+
+class "FIW_Studi_App::FSnews::fsnews_card.dart::FSnewsCard" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::FSnews::fsnews_card.dart::FSnewsCard"
+
+class "FIW_Studi_App::FSnews::fsnews_create_view.dart::FSnewsCreateView" {
+  {static} -TextEditingController _title
+  {static} -TextEditingController _text
+  +String title
+  +String text
+  +Widget build()
+}
+
+"FIW_Studi_App::FSnews::fsnews_create_view.dart::FSnewsCreateView" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::FSnews::fsnews_create_view.dart::FSnewsCreateView"
+
+class "FIW_Studi_App::FSnews::fsnews_view.dart::FSnewsView" {
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::FSnews::fsnews_view.dart::FSnewsView"
+
+class "FIW_Studi_App::FSnews::fsnews_view.dart::_FSnewsViewState" {
+  -Timer _timer
+  +Widget build()
+  -Widget _buildButtonIfLoggedIn()
+  +void initState()
+  +void dispose()
+  -Future _iniData()
+}
+
+"FIW_Studi_App::FSnews::fsnews_view.dart::_FSnewsViewState" o-- "dart::async::Timer"
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::FSnews::fsnews_view.dart::_FSnewsViewState"
+
+class "FIW_Studi_App::helper_functions.dart::HelperFunctions" {
+  {static} +MaterialColor createMaterialColor()
+  {static} +String displayTime()
+  {static} +String getIso8601Time()
+  {static} +void setCoffeeImageByState()
+  {static} +Future loadLoginFromSharedPref()
+  {static} +Future storeLoginInSharedPref()
+}
+
+class "FIW_Studi_App::KaimWebview::kaim_webview_card.dart::KaimWVCard" {
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::KaimWebview::kaim_webview_card.dart::KaimWVCard"
+
+class "FIW_Studi_App::KaimWebview::kaim_webview_card.dart::_KaimWVState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::KaimWebview::kaim_webview_card.dart::_KaimWVState"
+
+class "FIW_Studi_App::Rooms::bookings.dart::RadioWidgetDemo" {
+  +String title
+  +RadioWidgetDemoState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Rooms::bookings.dart::RadioWidgetDemo"
+
+class "FIW_Studi_App::Rooms::bookings.dart::RadioWidgetDemoState" {
+  +int selectedRadioTile
+  +void initState()
+  +dynamic setSelectedRadioTile()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Rooms::bookings.dart::RadioWidgetDemoState"
+
+class "FIW_Studi_App::Rooms::free_rooms.dart::FreeRooms" {
+  +FreeRoomsState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Rooms::free_rooms.dart::FreeRooms"
+
+class "FIW_Studi_App::Rooms::free_rooms.dart::FreeRoomsState" {
+  +List data
+  +String url
+  +bool free
+  -Future _getData()
+  -String _checkTime()
+  -Color _getColor()
+  +Widget build()
+  +void initState()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Rooms::free_rooms.dart::FreeRoomsState"
+
+class "FIW_Studi_App::Rooms::Model::booking.dart::Booking" {
+  +String description
+  +String endTime
+  +String externalCalendarUid
+  +String externalCalenderName
+  +String id
+  +String roomName
+  +String self
+  +String href
+  +String rel
+  +String type
+  +String startTime
+}
+
+class "FIW_Studi_App::Rooms::Model::room.dart::Room" {
+  +String bookingUrl
+  +String cns
+  +String id
+  +String personUrl
+  +String href
+  +String rel
+  +String type
+  +String roomName
+  +String roomStatus
+  +String roomStatusColor
+  +String roomStatusDisplay
+  +String self
+  +List<Booking> list
+}
+
+class "FIW_Studi_App::Rooms::rooms1_card.dart::Rooms1Card" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Rooms::rooms1_card.dart::Rooms1Card"
+
+class "FIW_Studi_App::Rooms::rooms2_card.dart::Rooms2Card" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Rooms::rooms2_card.dart::Rooms2Card"
+
+class "FIW_Studi_App::Rooms::studyrooms.dart::Rooms" {
+  +_RoomsState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Rooms::studyrooms.dart::Rooms"
+
+class "FIW_Studi_App::Rooms::studyrooms.dart::_RoomsState" {
+  +List<Room> roomDetails
+  +List<Booking> bookingDetails
+  +Material MyItems()
+  +Widget build()
+  +Future getRoomData()
+  +Future getBookingData()
+  -Color _getColorFromHex()
+  +String checkTime()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Rooms::studyrooms.dart::_RoomsState"
+
+class "FIW_Studi_App::Rooms::study_rooms.dart::Rooms" {
+  +_RoomsState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Rooms::study_rooms.dart::Rooms"
+
+class "FIW_Studi_App::Rooms::study_rooms.dart::_RoomsState" {
+  +Material MyItems()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Rooms::study_rooms.dart::_RoomsState"
+
+class "FIW_Studi_App::Scheduler::note.dart::Note" {
+  +int sem
+  +String degreeProgram
+  +int offset
+  +int insertSize
+  +String q
+  +Future getCourseList()
+  {static} -List _convertToListWithLectures()
+  {static} +String getNextUrl()
+}
+
+class "FIW_Studi_App::Scheduler::note.dart::Course" {
+  +String title
+  +String lecturers
+}
+
+class "FIW_Studi_App::Scheduler::schedule_card.dart::ScheduleCard" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Scheduler::schedule_card.dart::ScheduleCard"
+
+class "FIW_Studi_App::Scheduler::schedule_detail.dart::ScheduleDetail" {
+  +State createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::Scheduler::schedule_detail.dart::ScheduleDetail"
+
+class "FIW_Studi_App::Scheduler::schedule_detail.dart::_ScheduleDetailState" {
+  -List<Course> _courseList
+  +Widget build()
+  -Widget _buildCourseList()
+  +void initState()
+  -Future _initData()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::Scheduler::schedule_detail.dart::_ScheduleDetailState"
+
+class "FIW_Studi_App::Scheduler::schedule_semester.dart::ScheduleSemester" {
+  +List<int> semesterList
+  +Widget build()
+  -Widget _buildSemesterListView()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Scheduler::schedule_semester.dart::ScheduleSemester"
+
+class "FIW_Studi_App::Scheduler::schedule_view.dart::ScheduleView" {
+  +List<String> courseOfStudies
+  +Widget build()
+  -Widget _buildSemesterListView()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::Scheduler::schedule_view.dart::ScheduleView"
+
+class "FIW_Studi_App::startview.dart::StartView" {
+  +_StartViewState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "FIW_Studi_App::startview.dart::StartView"
+
+class "FIW_Studi_App::startview.dart::_StartViewState" {
+  +Widget build()
+  +void initState()
+  -Future _loadLogin()
+}
+
+"flutter::src::widgets::framework.dart::State<T>" <|-- "FIW_Studi_App::startview.dart::_StartViewState"
+
+class "FIW_Studi_App::UI::login_form.dart::LoginForm" {
+  {static} -TextEditingController _user
+  {static} -TextEditingController _pass
+  +String username
+  +String password
+  +Widget build()
+}
+
+"FIW_Studi_App::UI::login_form.dart::LoginForm" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::UI::login_form.dart::LoginForm"
+
+class "FIW_Studi_App::UI::nav_drawer.dart::NavDrawer" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "FIW_Studi_App::UI::nav_drawer.dart::NavDrawer"
+
+
+@enduml
