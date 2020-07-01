@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MobileAppBackend:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>MobileAppBackend</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="MobileAppBackend-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="MobileAppBackend:war exploded" />
+    </root>
+  </artifact>
+</component>

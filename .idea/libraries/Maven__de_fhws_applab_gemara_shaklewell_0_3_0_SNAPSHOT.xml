@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.fhws.applab.gemara:shaklewell:0.3.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/fhws/applab/gemara/shaklewell/0.3.0-SNAPSHOT/shaklewell-0.3.0-20180810.082510-19.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/fhws/applab/gemara/shaklewell/0.3.0-SNAPSHOT/shaklewell-0.3.0-20180810.082510-19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/fhws/applab/gemara/shaklewell/0.3.0-SNAPSHOT/shaklewell-0.3.0-20180810.082510-19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
